@@ -1,5 +1,4 @@
 const canvas = document.getElementById("canvas")
-console.log(canvas);
 canvas.width = window.innerWidth - 60;
 canvas.height = 400;
 
@@ -36,7 +35,6 @@ function draw(event)
 {
     if (is_drawing)
     {
-        console.log("Drawing = True");
         context.lineTo(event.clientX - canvas.offsetLeft,
                         event.clientY - canvas.offsetTop);
         context.strokeStyle = draw_color;
@@ -56,7 +54,6 @@ function stop(event)
         context.stroke();
         context.closePath();
         is_drawing = false;
-        console.log("Drawing = False");
     }
 
     event.preventDefault();
